@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-        <script type="text/css" src="assets/css/style.css"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
     <title>The Psychic Game</title>
   </head>
   <body style="background-image: url('assets/images/eightiesBackground.jpg');">
     <header>
         <div class="row">
             <div class="col-md-12">
-        <h1>The Psychic Game</h1>
+        <h1 class="chrome">Hangman</h1>
             </div>
         </div>
+        <h2 class="dreams">80s style</h2>
     </header>
 
         <br/>
-
-        <div class="container container--game">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Press any letter to get started.</h3>
-            </div>
-        </div>
+        <br/>
+        <br/>
         <br/>
 
-        <div class="row">
-            <div class="col-md-12">
+        <div class="container container--game">
+        <div class="row border-between" style: >
+            <div class="col-md-6">
+                <img src="assets/images/80s.jpg" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-md-6">
+                <h3>Press any letter to get started.</h3>
+        <br/>
                 <div id="game">
                 <ul class="list" style="list-style-type:none">
                     <li>
@@ -38,25 +43,32 @@
                     </li>
                     <br/>
                     <li>
-                        <span id="losses">Losses: </span>
+                        <p>Guessed Word:</p><span id="wordGuess"></span>
                     </li>
                     <br/>
                     <li>
-                        <span id="guessesLeft">Guesses Left: </span>
+                        <p>Number of Guesses Remaining: </p><span id="guessesLeft"></span>
                     </li>
                     <br/>
                     <li>
-                        <span id="let">Your Guesses so far: </span>
+                        <p>Letters Already Guessed:</p> <span id="lettersGuessed"></span>
                     </li>
                     <br/>
                     </ul>
+                    <br/>
+                    <br/>
+                    <br/>
                 </div>
             </div>
         </div>
     </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
 
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="assets/javascript/game2.js"></script>
   </body>
 </html>

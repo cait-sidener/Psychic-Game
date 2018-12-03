@@ -1,4 +1,3 @@
-function getItem() {
 var words = [
     "wham",
     "scorpions",
@@ -12,43 +11,37 @@ var words = [
     "bananarama"
 ];
 
-var wordToGuess = words[Math.floor(Math.random() * words.length)];
-
 // Create all the blank spaces
 // document.getElementById("wordGuess").innerHTML = 
 
-var blankSpaces = "";
-var wordLength = possibleWord.length;
-for (i = 0; i < wordLength; i++) {
-    var x = possibleWord.charAt(i);
+var wordToGuess = words[Math.floor(Math.random() * words.length)];
+var letters = wordToGuess.split("");
+console.log(letters);
 
-    if (x === " " || x === "/'") {
-        blankSpaces += x;
-    }else {
-        blankSpaces += "_";
-    }
+var blankSpaces = "";
+for (i = 0; i < letters.length; i++) {
+    blankSpaces = blankSpaces + "_ ";
 }
 
 document.getElementById("blankSpaces").innerHTML = blankSpaces;
 
-
-var possibleWord = words.split;
-
-}
-
 var guessesLeft = 9;
+var lettersGuessed=[];
 
-document.onkeypress = function(keyPressed) {
-    var keyPressed = keyPressed || window.event,
-    charCode = keyPressed.keyCode || keyPressed.which,
-    lettersGuessed = String.fromCharCode(charCode);
+document.onkeyup = function(evt) {
+    // var keyPressed = evt.key
+    lettersGuessed.push(event.key);
 
-    document.getElementById("lettersGuessed").innerHTML += lettersGuessed;
-    document.getElementById("guessesLeft").innerHTML = guessesLeft;
 
+    // create logic that compares key press to letters (letter.indexOf)
+    // if letter exist on letter on my letters array redo the letter placeholder and replcae _ with 
+    // matching letter
+
+    if (wordToGuess.indexOf(lettersGuessed) === -1) {
+    words.push(lettersGuessed);
+    }else {
     guessesLeft--;
-
-    if (guessesLeft === -1) {
-        alert("GAME OVER");
+    document.getElementById("guessesLeft").innerHTML = guessesLeft;
+    console.log(lettersGuessed);
     }
 }

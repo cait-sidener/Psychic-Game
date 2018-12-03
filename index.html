@@ -14,14 +14,13 @@
     <title>The Psychic Game</title>
   </head>
   <body style="background-image: url('assets/images/eightiesBackground.jpg');">
-    <header>
-        <div class="row">
+
+    <div class="row">
             <div class="col-md-12">
         <h1 class="chrome">Hangman</h1>
             </div>
-        </div>
+    </div>
         <h2 class="dreams">80s style</h2>
-    </header>
 
         <br/>
         <br/>
@@ -34,24 +33,39 @@
                 <img src="assets/images/80s.jpg" class="img-fluid" alt="Responsive image">
             </div>
             <div class="col-md-6">
+                <img id="youwin-image" src="assets/images/winImage.jpg" alt="Winning Image">
+                <img id="gameover-image" src="assets/images/gameOver-image.jpg" alt="Losing Image">
+                <h3 id="pressKeyTryAgain">Press Any Key to Try Again!</h3>
                 <h3>Press any letter to get started.</h3>
         <br/>
                 <div id="game">
                 <ul class="list" style="list-style-type:none">
                     <li>
-                        <span id="wins">Wins: </span>
+                        <p>Wins: </p>
+                    </li>
+                    <li>
+                        <p id="totalWins"></p>
                     </li>
                     <br/>
                     <li>
-                        <p>Guessed Word:</p><span id="wordGuess"></span>
+                        <p>Current Word:</p>
+                    </li>
+                    <li>
+                        <p id="currentWord"></p>
                     </li>
                     <br/>
                     <li>
-                        <p>Number of Guesses Remaining: </p><span id="guessesLeft"></span>
+                        <p>Number of Guesses Remaining: </p>
+                    </li>
+                    <li>
+                        <p id="remainingGuesses"></p>
                     </li>
                     <br/>
                     <li>
-                        <p>Letters Already Guessed:</p> <span id="lettersGuessed"></span>
+                        <p>Letters Already Guessed:</p>
+                    </li>
+                    <li>
+                        <p id="guessedLetters"></p>
                     </li>
                     <br/>
                     </ul>
@@ -69,6 +83,7 @@
 
 
 
-    <script type="text/javascript" src="assets/javascript/game2.js"></script>
+
+    <script type="text/javascript" src="assets/javascript/game3.js"></script>
   </body>
 </html>

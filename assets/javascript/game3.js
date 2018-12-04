@@ -139,5 +139,3 @@ function checkWin() {
         hasFinished = true;
     }
 };
-
-

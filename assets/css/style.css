@@ -25,6 +25,7 @@
         font-style: italic;
         margin: 0;
         line-height: 1;
+        text-align:center;
       }
       
 .chrome:before {
@@ -60,8 +61,44 @@
     -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
     z-index: 20;
   }
+
+  #gameover-image {
+    margin-left: 30%;
+    height:40%;
+    width: 40%;
+
+  }
   
   .windows.dreams {
     -webkit-text-stroke: 4px #f008b7;
+  }
+
+  #youwin-image {
+    margin-left: 30%;
+    height:40%;
+    width: 40%;
+
+  }
+
+  @media screen and (max-width: 980px) {
+    .container {
+      margin: auto;
+      width:100%;
+    }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      width:100%;
+    }
+
+  
+  @media screen and (max-width: 640px) {
+   .chrome{
+     width:100%;
+   }
+   
+    .container {
+      width:100%;
+    }
   }
 

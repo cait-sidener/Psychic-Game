@@ -49,8 +49,11 @@ function resetGame() {
 
     // Build the guessing word and clear it out
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
-        guessingWord.push("_ ");
+        guessingWord.push("_" + "  ");
     }
+
+    console.log(guessingWord);
+
 
     // Hide game over and win images/text
     document.getElementById("pressKeyTryAgain").style.cssText = "display: none";

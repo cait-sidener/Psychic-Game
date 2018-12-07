@@ -49,7 +49,7 @@ function resetGame() {
 
     // Build the guessing word and clear it out
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
-        guessingWord.push("_" + "  ");
+        guessingWord.push("_");
     }
 
     console.log(guessingWord);
@@ -70,7 +70,7 @@ function updateDisplay() {
     document.getElementById("totalWins").innerText = wins;
     document.getElementById("currentWord").innerText = "";
     for (var i = 0; i < guessingWord.length; i++) {
-        document.getElementById("currentWord").innerText += guessingWord[i];
+        document.getElementById("currentWord").innerText += ' ' + guessingWord[i];
     }
     document.getElementById("remainingGuesses").innerText = remainingGuesses;
     document.getElementById("guessedLetters").innerText = guessedLetters;
@@ -124,7 +124,7 @@ function evaluateGuess(letter) {
     }
 
     // If there are no indicies, remove a guess
-    if (positions.length <= 0) {
+    if (positions.length === 0) {
         remainingGuesses--;
     } else {
         // Loop through all indicies and replace the "_" with a letter
@@ -135,7 +135,8 @@ function evaluateGuess(letter) {
 };
 
 function checkWin() {
-    if(guessingWord.indexOf("_ ") === -1) {
+    // if(guessingWord === selectableWords[currentWordIndex]) {
+    if(guessingWord.indexOf("_") === -1) {
         document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display: block";
         wins++;

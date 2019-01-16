@@ -52,8 +52,6 @@ function resetGame() {
         guessingWord.push("_");
     }
 
-    console.log(guessingWord);
-
 
     // Hide game over and win images/text
     document.getElementById("pressKeyTryAgain").style.cssText = "display: none";
